@@ -1,0 +1,24 @@
+﻿
+@model MyFirstMVCApp.Models.Temperature
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+
+
+
+@using (Html.BeginForm("Index", "Fever", FormMethod.Post))
+{
+    <h1>
+        Check your fever
+    </h1>
+
+    <br />
+    @Html.EditorFor(m => m.TNumber)
+    <br />
+    @ViewBag.Message
+    <input type="submit" value="check" />
+    <button type="reset" class="btn btn-danger">Reset</button>
+}

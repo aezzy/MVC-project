@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "GuessingGame";
+}
+    <div class="display-4 text-center">
+
+        <h1>Guessing Game</h1>
+        @model MyFirstMVCApp.Models.InputNum
+
+       
+    <h5> You are logged in as:    @ViewBag.Name</h5>
+    </div>
+
+       
+<br />
+<br />
+
+<div class="text-center">
+    <form asp-controller="GuessingGame" asp-action="GuessNumber" method="post">
+
+       
+        <span>Enter Number (you are allowed 5 guesses) : </span> <input id="Text1" type="text" name="txtFirst" /> <br /><br />
+       
+        <input id="Submit1" type="submit" value="Guess" />
+    </form>
+
+    <h4>
+        @ViewBag.SumResult <br />
+        @ViewBag.SumResult1 <br />
+        @ViewBag.SumResult3<br />
+        @*@ViewBag.SumResult2<br />*@
+
+
+    </h4>
+    
+
+
+
+</div>
